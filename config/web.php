@@ -42,14 +42,28 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
+
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+        ],
+        
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'books' => 'site/books',
+                'authors' => 'site/authors',
+                'subscribe' => 'site/subscribe',
+                'add-book' => 'site/add-book',
+                'add-author' => 'site/add-author',
+                'delete-books' => 'site/delete-books',
+                'delete-authors' => 'site/delete-authors',
+                // '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+                // '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                // 'defaultRoute' => '/site/index',
             ],
         ],
-        */
+        
     ],
     'params' => $params,
 ];
