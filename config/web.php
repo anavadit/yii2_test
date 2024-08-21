@@ -58,6 +58,10 @@ $config = [
                 'add-author' => 'site/add-author',
                 'delete-books' => 'site/delete-books',
                 'delete-authors' => 'site/delete-authors',
+
+                'articles' => 'test/articles',
+                'article/<id:\d+>' => 'test/article',
+                'article-views' => 'test/article-views',
                 // '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 // '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                 // 'defaultRoute' => '/site/index',
