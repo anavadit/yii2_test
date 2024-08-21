@@ -21,7 +21,7 @@
         <li>
             Дата: <?php echo $artViewGroup->date; ?>&nbsp;
             ID пользователя: <?php echo $artViewGroup->user_id; ?>&nbsp;
-            Кол-во просмотров: <strong><?php echo $artViewGroup->count_views; ?></strong>
+            Кол-во просмотров: <strong><?php echo $artViewGroup->views; ?></strong>
         </li>
     <?php endforeach; ?>
 </ul>

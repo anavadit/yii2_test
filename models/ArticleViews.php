@@ -9,6 +9,8 @@ use yii\helpers\Html;
 class ArticleViews extends ActiveRecord
 {
 
+    public $views;
+    
     public static function tableName()
     {
         return '{{article_views}}';
