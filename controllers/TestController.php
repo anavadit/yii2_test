@@ -60,6 +60,14 @@ class TestController extends Controller
 
     public function actionArticleViews() {
         $artViews = ArticleViews::find()->all();
-        return $this->render('articleViews', ['artViews' => $artViews]);
+
+        $sql = ArticleViews::find()
+            ->select(['date', 'user_id', 'SUM(count_views) as views'])
+            ->groupBy(['date', 'user_id'])
+            ->having("YEAR(date) = YEAR(CURRENT_DATE())");
+
+        $artViewsGroup = $sql->all();
+
+        return $this->render('articleViews', ['artViews' => $artViews, 'artViewsGroup' => $artViewsGroup]);
     }
 }
